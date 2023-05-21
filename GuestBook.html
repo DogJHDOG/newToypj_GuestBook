@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./GuestBook.css">
+
+
+</head>
+<body>
+    
+    <div id="block">
+
+
+        <div id="container">
+    
+            <div id="modalContainer" class="hidden">
+                <div id="modalContent">
+                
+                    <div id="modal_Main">
+                
+                        <input id="modal_Title"  type="text" placeholder="제목">
+    
+    
+                        <input id="modal_author" type="text" placeholder="작성자">
+                    
+                
+                    </div>
+                
+                    <input id="modal_note" type="text" placeholder="비고">
+    
+                    <button id="modalSaveButton" onClick="postCreatePost()">등록</button>
+                    <button id="modalCloseButton">닫기</button>
+    
+                </div>
+    
+              </div>
+        
+            
+            <div id ="nav">
+                <h3 id=>글쓰기 방명록 리스트</h3>
+                <button id="btn" >글 추가</button>
+            </div>
+            
+            
+            <div id="list_things">
+    
+    
+    
+            </div>
+    
+        </div>
+    
+    </div>
+        <script src="./GuestBook.js"></script>
+    
+
+</body>
+</html>
