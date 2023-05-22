@@ -69,23 +69,26 @@ async function getPostList() {
         const detailText_div = document.createElement('div');
         detailText_div.id = 'text_content';
         
-        const detailTitle_text = document.createElement('h3');
-        detailTitle_text.innerText = datas.postName;
-
-        const detailAuthor_div = document.createElement('div');
-        detailAuthor_div.id = 'author_content';
-        detailAuthor_div.innerText = datas.authorName;
 
         const detailNote_text = document.createElement('div');
-        if(datas.postContent!="")detailNote_text.innerText = "Note : " + datas.postContent;
+        if(datas.postContent!="")detailNote_text.innerText = "note : " + datas.postContent;
 
         const detailTime_text = document.createElement('div');
         detailTime_text.innerText = "date : " + datas.dateCreated
 
-        detailText_div.appendChild(detailTitle_text);
         detailTouch_div.appendChild(detailText_div);
-        detailTouch_div.appendChild(detailAuthor_div);
 
+        // const date = new Date();
+
+        // const year = date.getFullYear();
+        // const month = ('0' + (date.getMonth() + 1)).slice(-2);
+        // const day = ('0' + date.getDate()).slice(-2);
+
+        // const hours = ('0' + date.getHours()).slice(-2);
+        // const minutes = ('0' + date.getMinutes()).slice(-2);
+        // const seconds = ('0' + date.getSeconds()).slice(-2);
+
+        // const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
 
         detail_div.appendChild(detailTouch_div);
         detail_div.appendChild(detailNote_text);
@@ -155,8 +158,8 @@ async function postCreatePost(){
       })
     })
 
-  getPostList();
   modal.classList.add('hidden');
+  window.location.reload();
 
   }
 
